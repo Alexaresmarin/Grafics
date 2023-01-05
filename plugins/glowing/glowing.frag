@@ -28,7 +28,7 @@ void main()
     sum /= count;
     sum = pow(sum, vec4(5.0));
         
-    fragColor = mix(texture2D(colorMap, st), sum, 0.8);
+    fragColor = mix(texture(colorMap, st), sum, 0.8);
     
 }
 

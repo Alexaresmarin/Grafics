@@ -86,7 +86,9 @@ void ShadowMap::drawQuad(const Point& p0, const Point& p1, const Point& p2, cons
         g.glGenVertexArrays(1, &VAO_rect);
         g.glBindVertexArray(VAO_rect);
 
-        // Create VBO with (x,y,z) coordinates
+        // Create VBO with (x,y,z) coordinates (se ponen en forma de Z)
+        // p0   p1
+        // p3   p2
         float coords[] = { p0.x(), p0.y(), p0.z(), p1.x(), p1.y(), p1.z(), p3.x(), p3.y(), p3.z(), p2.x(), p2.y(), p2.z() };
 
         GLuint VBO_coords;
