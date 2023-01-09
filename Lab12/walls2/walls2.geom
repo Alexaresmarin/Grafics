@@ -12,6 +12,7 @@ uniform mat4 modelViewProjectionMatrix;
 uniform mat4 modelViewMatrix;
 
 bool dins_capsa() {
+	// coords en eye-space
 	vec4 bmin = modelViewMatrix*vec4(boundingBoxMin,1);
 	vec4 bmax = modelViewMatrix*vec4(boundingBoxMax,1);
 	vec4 camera = vec4(0.0);
